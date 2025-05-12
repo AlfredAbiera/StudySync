@@ -38,7 +38,7 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-          name: github-pages # Ensure the artifact name matches exactly
+          name: github-pages-${{ github.run_id }} # Append workflow run ID to ensure uniqueness
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
