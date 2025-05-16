@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudySync - Smart Academic Task Management</title>
+    <link rel="stylesheet" href="home.css" />
+ 
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📚</span>
+        <span class="logo-text">StudySync</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how" class="nav-link">How It Works</a>
+        <a href="index.html#aboutSection" class="nav-link">About</a>
+      </div>
+      <div class="nav-buttons">
+        <a href="index.html?auth=login" class="btn btn-outline">Login</a>
+        <a href="index.html?auth=signup" class="btn btn-primary">Sign Up</a>
+      </div>
+      <div class="hamburger" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Master Your Academic Schedule with <span class="hero-title-highlight">StudySync</span></h1>
+        <p class="hero-subtitle">Organize assignments, track deadlines, and boost your productivity with our intelligent academic task management platform.</p>
+        <div class="hero-buttons">
+          <a href="index.html?auth=signup" class="btn btn-primary">Get Started Now</a>
+          <a href="#how" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img 
+          src="https://img.freepik.com/free-vector/focused-tiny-people-reading-books_74855-5836.jpg"
+          alt="Artistic illustration of students studying"
+          class="hero-illustration"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="feature-section" id="features">
+    <div class="section-heading">
+      <h2 class="section-title">Features Designed for Students</h2>
+      <p class="section-subtitle">StudySync helps you stay on top of your academic life with powerful yet simple tools.</p>
+    </div>
+    <div class="features-container">
+      <div class="feature-card">
+        <span class="feature-icon">📅</span>
+        <h3 class="feature-title">Smart Assignment Tracking</h3>
+        <p class="feature-description">Easily add, organize, and track all your assignments in one central location with custom priority levels.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">⏰</span>
+        <h3 class="feature-title">Deadline Reminders</h3>
+        <p class="feature-description">Never miss a deadline again with automated email notifications before assignments are due.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📊</span>
+        <h3 class="feature-title">Priority System</h3>
+        <p class="feature-description">Set importance levels from 1-5 to ensure you focus on what matters most when time is limited.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📱</span>
+        <h3 class="feature-title">Mobile Friendly</h3>
+        <p class="feature-description">Access your tasks from any device with our responsive design - desktop, tablet, or phone.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔍</span>
+        <h3 class="feature-title">Quick Search</h3>
+        <p class="feature-description">Find any assignment instantly with our powerful search functionality.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔒</span>
+        <h3 class="feature-title">Secure & Private</h3>
+        <p class="feature-description">Your academic data stays safe with our secure login system and data protection.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-section" id="how">
+    <div class="section-heading">
+      <h2 class="section-title">How StudySync Works</h2>
+      <p class="section-subtitle">Get started in minutes and transform your academic organization</p>
+    </div>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-connector"></div>
+        <div class="step-content">
+          <h3 class="step-title">Create Your Account</h3>
+          <p class="step-description">Sign up for free with your email address and set up your personal academic dashboard.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-connector"></div>
+        <div class="step-content">
+          <h3 class="step-title">Add Your Assignments</h3>
+          <p class="step-description">Enter assignment details including title, deadline date and time, and priority level.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-connector"></div>
+        <div class="step-content">
+          <h3 class="step-title">Stay Organized</h3>
+          <p class="step-description">View all your tasks in one place, sort by deadline or priority, and search for specific assignments.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3 class="step-title">Complete With Confidence</h3>
+          <p class="step-description">Receive timely reminders, mark tasks as complete, and enjoy improved academic performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-container"></div>
+      <h2 class="cta-title">Ready to Transform Your Academic Organization?</h2>
+      <a href="index.html?auth=signup" class="btn btn-white">Get Started Today</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <span class="logo-icon">📚</span>
+            <span class="footer-logo-text">StudySync</span>
+          </div>
+          <p class="footer-description">The smart academic task management platform designed to help students stay organized and meet deadlines with confidence.</p>
+          <div class="footer-social">
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#">Home</a></li>
+            <li class="footer-link"><a href="#features">Features</a></li>
+            <li class="footer-link"><a href="#how">How It Works</a></li>
+            <li class="footer-link"><a href="index.html#aboutSection">About</a></li>
+          </ul>
+        </div>
+        <div></div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      const navButtons = document.querySelector('.nav-buttons');
+      navLinks.classList.toggle('active');
+      navButtons.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
