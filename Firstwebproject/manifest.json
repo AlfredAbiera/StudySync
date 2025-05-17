@@ -1,0 +1,14 @@
+{
+  "name": "StudySync",
+  "short_name": "StudySync",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Task Management System",
+  "icons": [{
+    "src": "assets/favicon.ico",
+    "sizes": "64x64",
+    "type": "image/x-icon"
+  }]
+}
