@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudySync - Assignment Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff"/>
+  <link rel="manifest" href="manifest.json"/>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', async () => {
+        try {
+          // First request notification permission
+          const permission = await Notification.requestPermission();
+          if (permission === 'granted') {
+            const registration = await navigator.serviceWorker.register('./sw.js', {
+              scope: './',
+              updateViaCache: 'none'
+            });
+            console.log('ServiceWorker registration successful');
+          } else {
+            console.log('Notification permission denied');
+          }
+        } catch (err) {
+          console.log('ServiceWorker registration failed:', err);
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+
+<div class="container" id="aboutSection">
+  <div class="logo">
+    <span class="logo-icon">📚</span>
+    <span class="logo-text">StudySync</span>
+    <nav class="main-nav">
+    </nav>
+  </div>
+  
+  <div class="about-section">
+    <h2>About Us</h2>
+    <p>The <span class="highlight">StudySync (SS)</span> is a web-based platform designed to help students organize their academic tasks, track deadlines, and manage their workload more efficiently.
+
+Many students struggle with managing multiple assignments and deadlines, often leading to missed submissions and ineffective time management. Traditional methods such as manual planners or scattered notes can be unreliable.
+
+Our platform provides a structured and user-friendly interface where students can input assignments, set deadlines, receive notifications, and track their progress - ensuring that tasks are completed on time.</p>
+    <a href="home.html">Learn more</a>
+
+  <script>
+    function toggleMobileMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      const navButtons = document.querySelector('.nav-buttons');
+      navLinks.classList.toggle('active');
+      navButtons.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
+  </div>
+  
+  <button onclick="showAuth()">Get Started</button>
+</div>
+
+<div class="container hidden" id="authSection">
+  <div class="logo">
+    <span class="logo-icon">🔐</span>
+    <span class="logo-text" id="formTitle">Login</span>
+  </div>
+  
+  <input type="email" id="email" placeholder="Email" autocomplete="email">
+  <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+  <a href="#" onclick="showForgotPassword()" class="forgot-password-link">Forgot Password?</a>
+  <button onclick="authAction()">Login</button>
+  
+  <div class="auth-toggle" id="switchPrompt">
+    Don't have an account? <a href="#" onclick="toggleMode()">Sign up here</a>
+  </div>
+</div>
+
+<div class="container hidden" id="taskSection">
+  <div class="user-welcome">
+    <div class="user-avatar" id="userAvatar"></div>
+    <div>
+      <h3 id="userDisplay">Welcome</h3>
+      <p>Manage your academic tasks</p>
+    </div>
+  </div>
+  
+  <div class="tab-buttons">
+    <button class="tab-button active" onclick="switchTab('addTask')">Add Task</button>
+    <button class="tab-button" onclick="switchTab('viewTasks')">View Tasks</button>
+  </div>
+  
+  <div id="addTaskTab">
+    <h3>📝 New Assignment</h3>
+    <input type="text" id="title" placeholder="Task Title" autocomplete="off">
+    
+    <div class="input-group">
+      <div class="input-group-large">
+        <label for="deadline">Deadline Date</label>
+        <input type="date" id="deadline">
+      </div>
+      <div class="input-group-small">
+        <label for="time">Time</label>
+        <input type="time" id="time">
+      </div>
+    </div>
+    
+    <label for="priority">Priority Level</label>
+    <select id="priority">
+      <option value="" disabled selected>Select priority</option>
+      <option value="1">1 - Low</option>
+      <option value="2">2 - Medium-Low</option>
+      <option value="3">3 - Medium</option>
+      <option value="4">4 - Medium-High</option>
+      <option value="5">5 - High</option>
+    </select>
+    
+    <button class="btn-success" onclick="addTask()" id="addTaskBtn">Add Task</button>
+  </div>
+  
+  <div id="viewTasksTab" class="hidden">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search" placeholder="Search tasks by title" oninput="renderTasks()">
+    </div>
+    
+    <h3>📋 Your Assignments</h3>
+    <div id="taskList"></div>
+  </div>
+  
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="./main.js" type="text/javascript"></script>
+</body>
+</html>
